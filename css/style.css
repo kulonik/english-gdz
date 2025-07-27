@@ -118,7 +118,7 @@ header.open .third-line {
   right: -100vw;
   width: 100vw;
   height: 100vh;
-  background-color: #000066;
+  background-image: linear-gradient(to bottom, #000066, #000033);
   z-index: 8;
   transform: translateX(100%);
   transition: transform 0.5s, visibility 0.5s;
@@ -138,8 +138,20 @@ header.open .nav-list {
   font-size: 1.5em;
 }
 
+/* Main styles start */
+
 main {
-  height: 73vh;
+  margin: 10px;
+  color: #000033;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  letter-spacing: 0.08em;
+  word-spacing: 0.2em;
+}
+
+h1 {
+  font-size: 1.5em;
+  line-height: 1.3em;
 }
 
 footer {
