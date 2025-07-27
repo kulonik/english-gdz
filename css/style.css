@@ -1,0 +1,48 @@
+.knewave-regular {
+  font-family: "Knewave", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  box-sizing: content-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-image: linear-gradient(to bottom, #f0f0f8 0%, #ffffff 70%);
+  height: 100vh;
+  opacity: 0.9;
+}
+
+header {
+  background-image: url(../assets/background.jpg);
+  background-size: 100vw;
+  box-shadow: 0px 0px 20px 20px #f0f0f8;
+  background-repeat: no-repeat;
+  height: fit-content;
+}
+a {
+  text-decoration: none;
+}
+
+.logo a {
+  display: flex;
+  margin: 0 10px;
+}
+
+.image-logo {
+  border-radius: 50%;
+  width: 60px;
+  margin: 30px 0;
+}
+
+.logo-name {
+  font-size: 1.7em;
+  font-weight: 900;
+  color: #ffffff;
+  text-shadow: 3px 3px #000066;
+  align-self: center;
+  margin-left: 10px;
+  transform: translateY(-5px);
+}
