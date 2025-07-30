@@ -39,7 +39,8 @@ body {
 
 .wrapper {
   position: relative;
-  width: 390px;
+  max-width: 390px;
+  width: 380px;
   overflow-x: hidden;
 }
 
@@ -206,6 +207,7 @@ h2 {
   font-size: 1.5em;
   text-align: center;
   padding-top: 30px;
+  padding-bottom: 20px;
 }
 
 .books-desc {
@@ -281,6 +283,7 @@ input[type="radio"] {
   box-shadow: 5px 4px 16px 0 var(--pic-shadow);
   text-align: center;
   transition: 0.5s;
+  padding-bottom: 30px;
 }
 
 .book-item:hover {
@@ -316,6 +319,11 @@ input[type="radio"] {
 .cover:focus {
   transform: scale(1.1);
   transition: ease 0.5s;
+}
+
+h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .books-3year,
