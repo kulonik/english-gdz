@@ -5,9 +5,12 @@
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: content-box;
   font-family: Arial, Helvetica, sans-serif;
   color: var(--main-color-shadow);
+  overflow-x: hidden;
 }
 
 :root {
@@ -281,6 +284,12 @@ input[type="radio"] {
   transition: 0.5s;
 }
 
+.book-item:focus {
+  box-shadow: none;
+  transform: translate(5px, 4px);
+  transition: 0.5s;
+}
+
 .book-item-cover {
   overflow: hidden;
   margin: 9px auto;
@@ -299,6 +308,11 @@ input[type="radio"] {
   transition: ease 0.5s;
 }
 
+.cover:focus {
+  transform: scale(1.1);
+  transition: ease 0.5s;
+}
+
 .books-3year,
 .books-4year,
 .books-5year {
@@ -311,9 +325,9 @@ footer {
     to top,
     var(--main-color),
     #333399 30%,
-    var(--bg-color2)
+    var(--bg-color1)
   );
-  box-shadow: 0 0 20px 4px var(--bg-color2);
+  box-shadow: 0 0 20px 4px var(--bg-color1);
   height: 200px;
   margin-top: auto;
   margin-bottom: 0;
