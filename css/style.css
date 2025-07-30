@@ -17,6 +17,7 @@
   --third-color: #006633;
   --bg-color1: #ffffff;
   --bg-color2: #f0f0f8;
+  --pic-shadow: #7f7fa8;
 }
 
 body {
@@ -267,23 +268,41 @@ input[type="radio"] {
 .book-item {
   width: 300px;
   margin: auto;
-  border: 1px solid var(--main-color);
+  border: 2px solid var(--secondary-color);
   border-radius: 15px;
-  box-shadow: 2px 1px 4px 0 var(--main-color-shadow);
+  box-shadow: 5px 4px 16px 0 var(--pic-shadow);
   text-align: center;
+  transition: 0.5s;
+}
+
+.book-item:hover {
+  box-shadow: none;
+  transform: translate(5px, 4px);
+  transition: 0.5s;
 }
 
 .book-item-cover {
   overflow: hidden;
-  margin: 7px auto;
+  margin: 9px auto;
   border-radius: 15px 15px 0 0;
   width: 280px;
-  height: 387px;
+  height: 360px;
 }
 
+.cover {
+  width: 280px;
+  height: 360px;
+  transition: 0.5s;
+}
 .cover:hover {
   transform: scale(1.1);
   transition: ease 0.5s;
+}
+
+.books-3year,
+.books-4year,
+.books-5year {
+  display: none;
 }
 /* Footer styles start */
 footer {
