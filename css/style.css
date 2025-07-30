@@ -1,0 +1,320 @@
+.knewave-regular {
+  font-family: "Knewave", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  box-sizing: content-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--main-color-shadow);
+}
+
+:root {
+  --main-color: #000066;
+  --main-color-shadow: #000033;
+  --secondary-color: #660033;
+  --third-color: #006633;
+  --bg-color1: #ffffff;
+  --bg-color2: #f0f0f8;
+  --pic-shadow: #7f7fa8;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: linear-gradient(
+    to bottom,
+    var(--bg-color2) 0%,
+    var(--bg-color1) 100%
+  );
+  opacity: 0.9;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background-image: url(../assets/background.jpg);
+  background-size: 100%;
+  box-shadow: 0px 0px 20px 20px var(--bg-color1);
+  background-repeat: no-repeat;
+  /* height: fit-content; */
+  margin-bottom: 50px;
+}
+a {
+  text-decoration: none;
+}
+
+.logo {
+  z-index: 12;
+}
+
+.logo a {
+  display: flex;
+  margin: 0 10px;
+}
+
+.image-logo {
+  border-radius: 50%;
+  width: 60px;
+  margin: 30px 0;
+}
+
+.logo-name {
+  font-size: 1.7em;
+  font-weight: 900;
+  color: var(--bg-color1);
+  text-shadow: 3px 3px var(--main-color);
+  align-self: center;
+  margin-left: 10px;
+  transform: translateY(-5px);
+}
+
+/* Navigation burger */
+.nav-burger {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  height: 40px;
+  width: 50px;
+  transform: translateY(50%);
+  display: flex;
+  flex-direction: column;
+  z-index: 13;
+}
+.nav-burger-line {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--main-color);
+  position: absolute;
+  left: 0;
+}
+.first-line {
+  top: 0;
+}
+
+.second-line {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.third-line {
+  bottom: 0;
+}
+
+/* burger cross */
+header.open .first-line {
+  top: 50%;
+  transform: rotate(45deg);
+  transition: ease 0.5s;
+  background-color: var(--bg-color1);
+}
+
+header.open .second-line {
+  opacity: 0;
+}
+
+header.open .third-line {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+  transition: ease 0.5s;
+  background-color: var(--bg-color1);
+}
+
+/* Navigation style start */
+.nav-list {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  padding-top: 100px;
+  top: 0;
+  right: -100vw;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    var(--main-color),
+    var(--main-color-shadow)
+  );
+  z-index: 8;
+  transform: translateX(100%);
+  transition: transform 0.5s, visibility 0.5s;
+}
+
+header.open .nav-list {
+  transform: translateX(-100%);
+  visibility: visible;
+}
+.nav-list-item {
+  text-align: center;
+  list-style-type: none;
+  margin: 50px auto;
+}
+.nav-list-item a {
+  color: var(--bg-color1);
+  font-size: 1.5em;
+}
+
+/* Main styles start */
+
+main {
+  font-size: 1.1em;
+  line-height: 1.5em;
+  letter-spacing: 0.08em;
+  word-spacing: 0.2em;
+}
+
+/* Section Intro styles start */
+.intro {
+  margin: 0 20px 40px 20px;
+}
+h1 {
+  color: var(--main-color);
+  font-size: 1.5em;
+  line-height: 1.3em;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Section BOOKS styles start */
+.books {
+  margin-bottom: 100px;
+}
+
+.books-title {
+  background-color: var(--secondary-color);
+  padding: 0 10px 10px 0;
+}
+
+h2 {
+  color: var(--bg-color2);
+  font-weight: 900;
+  font-size: 1.5em;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.books-desc {
+  margin: 30px 20px 10px;
+}
+
+.line {
+  margin-left: 20px;
+  height: 2px;
+  width: 40%;
+  background-color: var(--secondary-color);
+}
+
+.books-years {
+  margin: 20px 20px 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.books-year-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.book-year-choice {
+  width: 175px;
+}
+
+input[type="radio"] {
+  appearance: none;
+}
+
+.book-year-choice label {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  line-height: 18px;
+  user-select: none;
+}
+
+.book-year-choice label:before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--third-color);
+  border-radius: 50%;
+  margin-right: 20px;
+  transform: translateY(2px);
+}
+
+.book-year-choice input[type="radio"]:checked + label::before {
+  background-color: var(--third-color);
+}
+
+.book-year-choice input[type="radio"]:checked + label {
+  color: var(--third-color);
+  font-weight: 900;
+}
+
+.set {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.book-item {
+  width: 300px;
+  margin: auto;
+  border: 2px solid var(--secondary-color);
+  border-radius: 15px;
+  box-shadow: 5px 4px 16px 0 var(--pic-shadow);
+  text-align: center;
+  transition: 0.5s;
+}
+
+.book-item:hover {
+  box-shadow: none;
+  transform: translate(5px, 4px);
+  transition: 0.5s;
+}
+
+.book-item-cover {
+  overflow: hidden;
+  margin: 9px auto;
+  border-radius: 15px 15px 0 0;
+  width: 280px;
+  height: 360px;
+}
+
+.cover {
+  width: 280px;
+  height: 360px;
+  transition: 0.5s;
+}
+.cover:hover {
+  transform: scale(1.1);
+  transition: ease 0.5s;
+}
+
+.books-3year,
+.books-4year,
+.books-5year {
+  display: none;
+}
+
+/* Footer styles start */
+footer {
+  background-image: linear-gradient(
+    to top,
+    var(--main-color),
+    #333399 30%,
+    var(--bg-color2)
+  );
+  box-shadow: 0 0 20px 4px var(--bg-color2);
+  height: 200px;
+  margin-top: auto;
+  margin-bottom: 0;
+}
