@@ -39,8 +39,7 @@ body {
 
 .wrapper {
   position: relative;
-  max-width: 390px;
-  width: 380px;
+  width: auto;
   overflow-x: hidden;
 }
 
@@ -143,9 +142,9 @@ header.open .third-line {
   padding: 0;
   padding-top: 100px;
   top: 0;
-  right: -100vw;
+  right: -100%;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-image: linear-gradient(
     to bottom,
     var(--main-color),
@@ -334,6 +333,10 @@ h3 {
 
 /* Footer styles start */
 footer {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap: 20px;
   background-image: linear-gradient(
     to top,
     var(--main-color),
@@ -344,4 +347,18 @@ footer {
   height: 200px;
   margin-top: auto;
   margin-bottom: 0;
+}
+
+.footer-contact {
+  padding-top: 50px;
+}
+
+svg {
+  width: 50px;
+  fill: var(--bg-color2);
+}
+
+.footer-copyright {
+  color: var(--bg-color2);
+  font-size: 1.2em;
 }
